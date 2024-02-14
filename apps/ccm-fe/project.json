@@ -1,0 +1,72 @@
+{
+  "name": "ccm-fe",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "oss-ccm",
+  "sourceRoot": "apps/ccm-fe/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/ccm-fe",
+        "index": "apps/ccm-fe/src/index.html",
+        "browser": "apps/ccm-fe/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/ccm-fe/tsconfig.app.json",
+        "assets": ["apps/ccm-fe/src/favicon.ico", "apps/ccm-fe/src/assets"],
+        "styles": ["apps/ccm-fe/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "ccm-fe:build:production"
+        },
+        "development": {
+          "buildTarget": "ccm-fe:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "ccm-fe:build"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "ccm-fe:build",
+        "staticFilePath": "dist/apps/ccm-fe/browser"
+      }
+    }
+  }
+}
