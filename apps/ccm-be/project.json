@@ -1,0 +1,24 @@
+{
+  "name": "ccm-be",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/ccm-be/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "ccm-be:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "ccm-be:build:development"
+        },
+        "production": {
+          "buildTarget": "ccm-be:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
