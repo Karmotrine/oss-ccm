@@ -2,7 +2,7 @@
   <nav>
     <ul>
       <li *ngFor="let link of NAVBAR_LINKS">
-        <a [href]="link.url">
+        <a [routerLink]="link.url">
           {{ link.label }}
         </a>
       </li>

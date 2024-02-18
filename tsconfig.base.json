@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@oss-ccm/frontend/login/feature": [
+        "libs/frontend/login/feature/src/index.ts"
+      ],
+      "@oss-ccm/frontend/register/feature": [
+        "libs/frontend/register/feature/src/index.ts"
+      ],
       "@oss-ccm/frontend/shared/ui/footer": [
         "libs/frontend/shared/ui/footer/src/index.ts"
       ],

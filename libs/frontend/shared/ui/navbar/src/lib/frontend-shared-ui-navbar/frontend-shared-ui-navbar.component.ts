@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 interface INavbarLink {
   label: string;
@@ -9,7 +10,7 @@ interface INavbarLink {
 @Component({
   selector: 'oss-ccm-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './frontend-shared-ui-navbar.component.html',
   styleUrl: './frontend-shared-ui-navbar.component.css',
 })
