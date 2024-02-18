@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@oss-ccm/frontend/shared/ui/footer": [
+        "libs/frontend/shared/ui/footer/src/index.ts"
+      ],
+      "@oss-ccm/frontend/shared/ui/navbar": [
+        "libs/frontend/shared/ui/navbar/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

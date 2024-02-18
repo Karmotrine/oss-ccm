@@ -1,0 +1,26 @@
+{
+  "name": "frontend-shared-ui-footer",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/shared/ui/footer/src",
+  "prefix": "oss-ccm",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/frontend/shared/ui/footer/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/frontend/shared/ui/footer/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/frontend/shared/ui/footer/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}
