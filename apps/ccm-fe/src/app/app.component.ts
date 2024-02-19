@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { NavbarComponent } from '@oss-ccm/frontend/shared/ui/navbar';
-import { FooterComponent } from '@oss-ccm/frontend/shared/ui/footer';
+import { NavbarComponent } from '@oss-ccm/frontend/landing/layout/ui/navbar';
+import { FooterComponent } from '@oss-ccm/frontend/landing/layout/ui/footer';
 
 @Component({
   standalone: true,

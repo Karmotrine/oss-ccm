@@ -1,0 +1,26 @@
+{
+  "name": "frontend-landing-shell-feature",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/landing/shell/feature/src",
+  "prefix": "oss-ccm",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/frontend/landing/shell/feature/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/frontend/landing/shell/feature/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/frontend/landing/shell/feature/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

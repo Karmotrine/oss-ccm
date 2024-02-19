@@ -15,17 +15,26 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@oss-ccm/frontend/login/feature": [
-        "libs/frontend/login/feature/src/index.ts"
+      "@oss-ccm/frontend/auth/login/feature": [
+        "libs/frontend/auth/login/feature/src/index.ts"
       ],
-      "@oss-ccm/frontend/register/feature": [
-        "libs/frontend/register/feature/src/index.ts"
+      "@oss-ccm/frontend/auth/register/feature": [
+        "libs/frontend/auth/register/feature/src/index.ts"
       ],
-      "@oss-ccm/frontend/shared/ui/footer": [
-        "libs/frontend/shared/ui/footer/src/index.ts"
+      "@oss-ccm/frontend/auth/shell/feature": [
+        "libs/frontend/auth/shell/feature/src/index.ts"
       ],
-      "@oss-ccm/frontend/shared/ui/navbar": [
-        "libs/frontend/shared/ui/navbar/src/index.ts"
+      "@oss-ccm/frontend/landing/layout/feature": [
+        "libs/frontend/landing/layout/feature/src/index.ts"
+      ],
+      "@oss-ccm/frontend/landing/layout/ui/footer": [
+        "libs/frontend/landing/layout/ui/footer/src/index.ts"
+      ],
+      "@oss-ccm/frontend/landing/layout/ui/navbar": [
+        "libs/frontend/landing/layout/ui/navbar/src/index.ts"
+      ],
+      "@oss-ccm/frontend/landing/shell/feature": [
+        "libs/frontend/landing/shell/feature/src/index.ts"
       ]
     }
   },

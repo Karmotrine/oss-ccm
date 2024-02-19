@@ -2,15 +2,17 @@ import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
   {
-    path: 'login',
-    loadComponent: () =>
-      import('@oss-ccm/frontend/login/feature').then((c) => c.LoginComponent),
+    path: '',
+    loadChildren: () =>
+      import('@oss-ccm/frontend/landing/shell/feature').then(
+        (r) => r.landingShellFeatureRoutes
+      ),
   },
   {
-    path: 'register',
-    loadComponent: () =>
-      import('@oss-ccm/frontend/register/feature').then(
-        (c) => c.RegisterComponent
+    path: 'auth',
+    loadChildren: () =>
+      import('@oss-ccm/frontend/auth/shell/feature').then(
+        (r) => r.authShellFeatureRoutes
       ),
   },
 ];
